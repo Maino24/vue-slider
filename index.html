@@ -14,7 +14,8 @@
     <div class="container-fluid text-center" id="app">
         <i class="fa-solid fa-chevron-left" @click="cambiaFotoLeft"></i>
         
-        <div>{{ obj[ indice ].linkImage}}</div>
+        
+        <img :src="obj[indice].linkImage" alt="">
         
 
         <i class="fa-solid fa-chevron-right" @click="cambiaFotoRight"></i>
