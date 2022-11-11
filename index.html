@@ -12,8 +12,9 @@
     
 
     <div class="container-fluid text-center" id="app">
-        <i class="fa-solid fa-chevron-left" @click="cambiaFotoSinistra"></i>
-        <img v-for="image in images" :src="image" alt="">
+        <i class="fa-solid fa-chevron-left" @click="cambiaFotoLeft"></i>
+        
+        <div>{{ obj[ indice ].linkImage }}<img :src="linkImage" alt=""></div>
         <i class="fa-solid fa-chevron-right" @click="cambiaFotoRight"></i>
     </div>
 
