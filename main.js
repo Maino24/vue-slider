@@ -11,12 +11,16 @@ var app = new Vue(
                 {linkImage: `https://i.picsum.photos/id/938/200/300.jpg?hmac=MVXKrDXBUPK5fv_Ev3FTdCFeYf9rvJE2Tz9xynjeelM`},
                 {linkImage: `https://i.picsum.photos/id/659/200/300.jpg?hmac=cmMJe403Rt0WMoriAFlgDaHI4FkwevCOXFyhnelzolY`},
                 {linkImage: `https://i.picsum.photos/id/389/200/300.jpg?hmac=XjGcjYBMJ1aWzqOK5SWp_oZ2nU6KgS1PPzuQXJvRcJ4`},
-                {linkImage: `https://i.picsum.photos/id/61/200/300.jpg?hmac=4gnmCaXyXsOzE8pxb43yUtdfZnVbnUSGdPaJdh-aCUo`},
-                //
+                {linkImage: `https://i.picsum.photos/id/61/200/300.jpg?hmac=4gnmCaXyXsOzE8pxb43yUtdfZnVbnUSGdPaJdh-aCUo`}
             
             ],
 
-            indice: 0,
+         indice: 0,
+        },
+        
+        mounted() {
+          //mounted entra in gioco quando l'applicativo vue ha caricato el: #app
+          this.attivaIntervallo()
         },
 
         methods:{
@@ -46,6 +50,9 @@ var app = new Vue(
                     return this.indice++;
                   }
 
+            },
+            attivaIntervallo(){
+              setInterval( ()=>{ this.cambiaFotoRight() }, 3000 )
             }
 
         }
@@ -119,3 +126,6 @@ var app = new Vue({
   }
 })
 */
+
+
+
