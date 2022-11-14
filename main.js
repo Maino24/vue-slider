@@ -50,3 +50,18 @@ var app = new Vue(
         }
     }
 )
+
+
+
+/* CORREZIONE LEZIONE */
+
+var app = new Vue({
+
+  data: {
+
+  },
+  methods: {
+
+  }
+
+})
