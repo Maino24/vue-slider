@@ -10,7 +10,7 @@
 </head>
 <body>
     
-
+    
     <div class="container-fluid text-center" id="app">
         <i class="fa-solid fa-chevron-left" @click="cambiaFotoLeft"></i>
         
@@ -21,18 +21,21 @@
         <i class="fa-solid fa-chevron-right" @click="cambiaFotoRight"></i>
     </div>
 
-
+    
     <!-- CORREZIONE LEZIONE -->
-
+    <!--
     <div id="app">
 
         <div class="container min-vh-100 d-flex justify-content-center  align-item-center">
-            <i class="fa-solid fa-chevron-left" @click="cambiaFotoRight"></i>
-            <img src="./img/faris-mohammed-d30sszrW7Vw-unsplash.jpg" alt="">
-            <i class="fa-solid fa-chevron-right" @click="cambiaFotoRight"></i>
+            <i class="fa-solid fa-chevron-left" @click="immaginePrecedente"></i>
+            <img class="container min-vh-100" v-bind:src="obj[indexImmagini].url" v-bind:alt="obj[0].url">
+            <i class="fa-solid fa-chevron-right" @click="immagineSuccessiva"></i>
         </div>
-
+        <div class="d-flex">
+                <i class="fa-solid fa-circle" v-for="(elem, index) in obj" @click="selezioneImmaginePallini(index)"></i> 
+        </div>
     </div>
+    
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

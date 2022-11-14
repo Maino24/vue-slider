@@ -1,3 +1,4 @@
+
 var app = new Vue(
     {
         el: `#app`,
@@ -54,14 +55,67 @@ var app = new Vue(
 
 
 /* CORREZIONE LEZIONE */
-
+/*
 var app = new Vue({
-
+  el: `#app`,
   data: {
 
+    indexImmagini: 0,
+
+    obj: [
+      {
+        url: `./img/johannes-plenio-RwHv7LgeC7s-unsplash.jpg`,
+        alt: `descrizione immagine 1`
+    },
+    {
+      url: `./img/aron-visuals-LSFuPFE9vKE-unsplash.jpg`,
+      alt: `descrizione immagine 1`
   },
+  {
+    url: `./img/scott-webb-_3l5B_4E_u0-unsplash.jpg`,
+    alt: `descrizione immagine 1`
+},
+{
+  url: `./img/fabrice-villard-7__6lSyuYeA-unsplash.jpg`,
+  alt: `descrizione immagine 1`
+},
+{
+  url: `./img/cosmic-timetraveler--SFhuMwFClk-unsplash.jpg`,
+  alt: `descrizione immagine 1`
+},
+
+    ]
+
+  },
+
+  mounted() {
+    //mounted entra in gioco quando l'applicativo vue ha caricato el: #app
+    this.attivaIntervallo()
+  },
+
   methods: {
 
+    immagineSuccessiva(){
+      //cambio immagine in avanti
+      if( this.indexImmagini < this.obj.length-1 ){
+        this.indexImmagini++
+      }else{
+        this.indexImmagini = 0
+      }
+    },
+    immaginePrecedente(){
+      if(this.indexImmagini <= 0){
+        this.indexImmagini = this.obj.length-1
+      }else{
+        this.indexImmagini --
+      }
+    },
+    attivaIntervallo(){
+      setInterval( ()=>{ this.immagineSucccessiva() }, 3000 )
+    },
+    selezioneImmaginePallini(index){
+      this.indexImmagini
+    }
   }
-
 })
+*/
